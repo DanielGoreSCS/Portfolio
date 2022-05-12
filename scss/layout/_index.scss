@@ -2,8 +2,16 @@
 .head {
     grid-area: header;
 }
-.nav {
+.nav { //Originally tried to use . but it didn't work
     grid-area: nav;
+    &-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+.empty { 
 }
 .content {
     grid-area: content;
@@ -15,7 +23,6 @@
     display: grid;
     gap: 20px;
     grid-template-areas:
-    "nav"
     "header"
     "content"
     "contact";
