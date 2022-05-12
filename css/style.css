@@ -21,6 +21,12 @@
 .nav {
   grid-area: nav;
 }
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 
 .content {
   grid-area: content;
@@ -33,7 +39,7 @@
 .wrapper {
   display: grid;
   gap: 20px;
-  grid-template-areas: "nav" "header" "content" "contact";
+  grid-template-areas: "header" "content" "contact";
 }
 
 @media (min-width: 576px) {
