@@ -1,0 +1,32 @@
+@use '../abstracts/breakpoints' as *;
+.head {
+    grid-area: header;
+}
+.nav {
+    grid-area: nav;
+}
+.content {
+    grid-area: content;
+}
+.contact {
+    grid-area: contact;
+}
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "nav"
+    "header"
+    "content"
+    "contact";
+}
+
+@media (min-width: map-get($breakpoints, 'sm')) {
+    .wrapper {
+        grid-template-columns: 1fr 7fr;
+        grid-template-areas: 
+        "nav header"
+        "nav content"
+        "nav contact";
+    }
+}
