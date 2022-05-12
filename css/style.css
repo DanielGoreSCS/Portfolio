@@ -1,3 +1,17 @@
-
+.hero-img {
+  background: url("../img/pexels-anni-roenkae-2693212.jpg") no-repeat top center;
+  background-color: #ccc;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+}
 
 /*# sourceMappingURL=style.css.map */
