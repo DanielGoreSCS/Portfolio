@@ -1,0 +1,26 @@
+$gutter: 10px;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid 3px red;
+    text-align: center;
+    gap: 10px;
+}
+.col {
+    &-4 {
+        border: solid 2px cyan;
+        flex-grow: 1;
+        width: calc(33% - $gutter);
+    }
+    &-6 {
+        flex-grow: 1;
+        width: calc(49% - $gutter);
+        border: solid 2px cyan;
+    }
+    &-12 {
+        flex-grow: 1;
+        width: 100%;
+        border: solid 2px cyan;
+    }
+}

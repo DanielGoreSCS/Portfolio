@@ -1,15 +1,4 @@
 @use '../abstracts/breakpoints';
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: solid 3px red;
-}
-.col {
-    border: solid 2px cyan;
-    flex-grow: 1;
-    width: 33%;
-}
 .card {
     border: solid 1px black;
     height: 400px;
