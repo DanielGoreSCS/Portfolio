@@ -1,3 +1,50 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #25293b;
+}
+
+a {
+  text-decoration: none;
+  color: #25293b;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: solid 3px red;
+}
+
+.col {
+  border: solid 2px cyan;
+  flex-grow: 1;
+  width: 33%;
+}
+
+.card {
+  border: solid 1px black;
+  height: 400px;
+}
+.card img:hover {
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  filter: brightness(50%);
+}
+.card:hover {
+  color: grey;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .hero-img {
   background: url("../img/pexels-anni-roenkae-2693212.jpg") no-repeat top center;
   background-color: #ccc;
@@ -12,6 +59,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #FFF;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.fa-brands {
+  color: #52B2CB;
 }
 
 .head {
@@ -20,12 +73,31 @@
 
 .nav {
   grid-area: nav;
+  border-right: solid 5px #52B2CB;
+  text-align: center;
+}
+.nav-icon {
+  color: #52B2CB;
+  font-size: 7rem;
+}
+.nav-split {
+  border-bottom: solid 5px #52B2CB;
 }
 .nav-fixed {
+  width: 12.5%;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+}
+.nav-col {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.nav-link:hover {
+  border-bottom: solid 2px #52B2CB;
 }
 
 .content {
@@ -38,7 +110,6 @@
 
 .wrapper {
   display: grid;
-  gap: 20px;
   grid-template-areas: "header" "content" "contact";
 }
 
