@@ -33,9 +33,11 @@
 }
 .content {
     grid-area: content;
+    padding-top: 4rem;
 }
 .contact {
     grid-area: contact;
+    padding-top: 4rem;
 }
 .wrapper {
     display: grid;

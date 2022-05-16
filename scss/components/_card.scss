@@ -1,6 +1,5 @@
-@use '../abstracts/breakpoints';
+@use '../abstracts/breakpoints' as *;
 .card {
-    border: solid 1px black;
     height: 400px;
     & img:hover {
         border-radius: 5px;

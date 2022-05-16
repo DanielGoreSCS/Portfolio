@@ -15,7 +15,6 @@ ul {
 }
 
 .card {
-  border: solid 1px black;
   height: 400px;
 }
 .card img:hover {
@@ -36,29 +35,24 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: solid 3px red;
-  gap: 10px;
+  gap: 20px;
 }
 
 .col-4 {
   flex-grow: 1;
-  width: calc(33% - 10px);
-  border: solid 2px cyan;
+  width: calc(33% - 20px);
 }
 .col-6 {
   flex-grow: 1;
-  width: calc(49% - 10px);
-  border: solid 2px cyan;
+  width: calc(49% - 20px);
 }
 .col-8 {
   flex-grow: 1;
-  width: calc(66% - 10px);
-  border: solid 2px cyan;
+  width: calc(66% - 20px);
 }
 .col-12 {
   flex-grow: 1;
   width: 100%;
-  border: solid 2px cyan;
 }
 
 .form-control {
@@ -66,6 +60,11 @@ img {
   height: 40px;
   background-color: lightgrey;
   border: none;
+  border-radius: 5px;
+}
+.form-btn {
+  padding: 15px 50px;
+  background-color: white;
   border-radius: 5px;
 }
 
@@ -126,10 +125,12 @@ img {
 
 .content {
   grid-area: content;
+  padding-top: 4rem;
 }
 
 .contact {
   grid-area: contact;
+  padding-top: 4rem;
 }
 
 .wrapper {
