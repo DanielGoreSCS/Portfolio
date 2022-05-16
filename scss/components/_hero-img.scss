@@ -17,4 +17,13 @@
         text-align: center;
         font-size: 2rem;
     }
+    &-scroll {
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%, -98%);
+        text-align: center;
+        font-size: 1.25rem;
+        color: $white;
+    }
 }

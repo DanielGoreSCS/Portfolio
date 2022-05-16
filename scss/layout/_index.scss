@@ -5,14 +5,15 @@
 }
 .nav { //Originally tried to use . but it didn't work
     grid-area: nav;
-    border-right: solid 5px $primary;
+    border-right: solid 3px $primary;
     text-align: center;
     &-icon {
         color: $primary;
         font-size: 7rem;
     }
     &-split {
-        border-bottom: solid 5px $primary;
+        border-bottom: solid 3px $primary;
+        margin-bottom: 3rem;
     }
     &-fixed {
         width: 12.5%;
@@ -23,9 +24,15 @@
         left: 0;
         z-index: 1;
     }
+    &-contact {
+        border-top: solid 3px $primary;
+        border-bottom: solid 3px $primary;
+    }
     &-col {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
     }
     &-link:hover {
         border-bottom: solid 2px $primary;
@@ -38,6 +45,10 @@
 .contact {
     grid-area: contact;
     padding-top: 4rem;
+    &-scroll {
+        text-align: center;
+        font-size: 1.25rem;
+    }
 }
 .wrapper {
     display: grid;
