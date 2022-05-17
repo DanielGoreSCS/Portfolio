@@ -160,7 +160,7 @@ img {
   border-bottom: solid 2px #52B2CB;
 }
 
-.head {
+.header {
   grid-area: header;
 }
 
@@ -180,13 +180,18 @@ img {
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header" "content" "contact";
+  grid-template-areas: "nav" "header" "content" "contact";
 }
 
 @media (min-width: 576px) {
   .wrapper {
     grid-template-columns: 200px 1fr;
     grid-template-areas: "nav header" "nav content" "nav contact";
+  }
+
+  .wrapper-about {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "nav content" "nav content" "nav content";
   }
 }
 .container {

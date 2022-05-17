@@ -1,6 +1,6 @@
 @use '../abstracts/breakpoints' as *;
 @use '../abstracts/colors' as *;
-.head {
+.header {
     grid-area: header;
 }
 
@@ -19,6 +19,7 @@
 .wrapper {
     display: grid;
     grid-template-areas:
+    "nav"
     "header"
     "content"
     "contact";
@@ -31,5 +32,12 @@
         "nav header"
         "nav content"
         "nav contact";
+    }
+    .wrapper-about {
+        grid-template-columns: $nav-width 1fr;
+        grid-template-areas:
+        "nav content"
+        "nav content"
+        "nav content";
     }
 }
