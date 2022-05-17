@@ -77,6 +77,15 @@ img {
   overflow: hidden;
   position: relative;
 }
+.hero-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+}
 .hero-text {
   position: absolute;
   top: 50%;
@@ -85,6 +94,7 @@ img {
   color: #FFF;
   text-align: center;
   font-size: 2rem;
+  z-index: 1;
 }
 .hero-scroll {
   position: absolute;
@@ -117,7 +127,6 @@ img {
 
 .nav {
   grid-area: nav;
-  border-right: solid 3px #52B2CB;
   text-align: center;
 }
 .nav-icon {
@@ -129,13 +138,13 @@ img {
   margin-bottom: 3rem;
 }
 .nav-fixed {
-  width: 12.5%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  height: 100%;
+  border-right: solid 3px #52B2CB;
+  box-sizing: border-box;
 }
 .nav-contact {
   border-top: solid 3px #52B2CB;
@@ -176,7 +185,7 @@ img {
 
 @media (min-width: 576px) {
   .wrapper {
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: 200px 1fr;
     grid-template-areas: "nav header" "nav content" "nav contact";
   }
 }

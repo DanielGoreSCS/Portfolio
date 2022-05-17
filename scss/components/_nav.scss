@@ -1,3 +1,4 @@
+@use '../abstracts/breakpoints' as *;
 @use '../abstracts/colors' as *;
 .scroll {
     text-align: center;
@@ -8,7 +9,7 @@
 }
 .nav { //Originally tried to use . but it didn't work
     grid-area: nav;
-    border-right: solid 3px $primary;
+    
     text-align: center;
     &-icon {
         color: $primary;
@@ -19,13 +20,13 @@
         margin-bottom: 3rem;
     }
     &-fixed {
-        width: 12.5%;
+        width: $nav-width;
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
+        height: 100%;
+        border-right: solid 3px $primary;
+        box-sizing: border-box;
     }
     &-contact {
         border-top: solid 3px $primary;

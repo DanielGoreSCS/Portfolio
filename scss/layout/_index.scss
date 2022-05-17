@@ -26,7 +26,7 @@
 
 @media (min-width: map-get($breakpoints, 'sm')) {
     .wrapper {
-        grid-template-columns: 1fr 7fr;
+        grid-template-columns: $nav-width 1fr;
         grid-template-areas: 
         "nav header"
         "nav content"
