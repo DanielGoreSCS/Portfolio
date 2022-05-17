@@ -1,4 +1,43 @@
+@use '../abstracts/colors' as *;
 .scroll {
     text-align: center;
     margin: 5rem;
+}
+.textarea {
+    padding-bottom: 8rem;
+}
+.nav { //Originally tried to use . but it didn't work
+    grid-area: nav;
+    border-right: solid 3px $primary;
+    text-align: center;
+    &-icon {
+        color: $primary;
+        font-size: 7rem;
+    }
+    &-split {
+        border-bottom: solid 3px $primary;
+        margin-bottom: 3rem;
+    }
+    &-fixed {
+        width: 12.5%;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &-contact {
+        border-top: solid 3px $primary;
+        border-bottom: solid 3px $primary;
+    }
+    &-col {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    &-link:hover {
+        border-bottom: solid 2px $primary;
+    }
 }

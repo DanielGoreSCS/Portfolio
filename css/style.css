@@ -111,8 +111,8 @@ img {
   margin: 5rem;
 }
 
-.head {
-  grid-area: header;
+.textarea {
+  padding-bottom: 8rem;
 }
 
 .nav {
@@ -149,6 +149,10 @@ img {
 }
 .nav-link:hover {
   border-bottom: solid 2px #52B2CB;
+}
+
+.head {
+  grid-area: header;
 }
 
 .content {
