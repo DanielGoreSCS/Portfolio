@@ -160,6 +160,12 @@ img {
   border-bottom: solid 2px #52B2CB;
 }
 
+.box-primary {
+  width: 80%;
+  background: #52B2CB;
+  border: solid 5px papayawhip;
+}
+
 .header {
   grid-area: header;
 }
