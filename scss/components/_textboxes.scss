@@ -1,9 +1,30 @@
+@use '../abstracts/breakpoints' as *;
 @use '../abstracts/colors' as *;
 
 .box-primary {
-    width: 1000px;
     background: $primary;
     border: solid 5px $accent;
     border-radius: 15px;
     box-shadow: 0 3px 35px rgb(0 0 0 / 60%);
+}
+
+@media (min-width: map-get($breakpoints, 'sm')) {
+    .box-primary {
+        width: calc(map-get($breakpoints, 'sm') - 50px);
+    }
+}
+@media (min-width: map-get($breakpoints, 'md')) {
+    .box-primary {
+        width: calc(map-get($breakpoints, 'md') - 100px);
+    }
+}
+@media (min-width: map-get($breakpoints, 'lg')) {
+    .box-primary {
+        width: calc(map-get($breakpoints, 'lg') - 220px);
+    }
+}
+@media (min-width: map-get($breakpoints, 'xl')) {
+    .box-primary {
+        width: calc(map-get($breakpoints, 'xl') - 220px);
+    }
 }

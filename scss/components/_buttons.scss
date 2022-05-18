@@ -1,14 +1,24 @@
 @use '../abstracts/colors' as *;
 .btn {
-    padding: 25px 15px;
-    border: solid 5px $accent;
-    border-radius: 15px;
-    color: $white;
-    background-color: $secondary;
     font-size: 1.063rem;
     line-height: 35px;
     transition: 0.2s ease;
-    &:hover {
-        background: darken($secondary, 10%);
+    &-treehouse {
+        padding: 25px 15px;
+        border: solid 5px $accent;
+        border-radius: 15px;
+        color: $white;
+        background-color: $secondary;
+        &:hover {
+            background: darken($secondary, 10%);
+        }
+    }
+    &-form {
+        padding: 15px 50px;
+        background-color: $white;
+        border-radius: 5px;
+        &:hover {
+            background: darken($white, 10%);
+        }
     }
 }

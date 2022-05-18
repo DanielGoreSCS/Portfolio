@@ -1,7 +1,7 @@
 @use '../abstracts/breakpoints' as *;
 @use '../abstracts/colors' as *;
 .card {
-    height: 400px;
+    height: 100%;
     & img:hover {
         border-radius: 5px;
         box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
