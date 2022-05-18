@@ -6,11 +6,9 @@
 
 .content {
     grid-area: content;
-    padding-top: 4rem;
 }
 .contact {
     grid-area: contact;
-    padding-top: 4rem;
     &-scroll {
         text-align: center;
         font-size: 1.25rem;
@@ -23,21 +21,17 @@
     "header"
     "content"
     "contact";
+    &-split {
+        padding-top: 4rem;
+    }
 }
 
-@media (min-width: map-get($breakpoints, 'sm')) {
+@media (min-width: map-get($breakpoints, 'lg')) {
     .wrapper {
         grid-template-columns: $nav-width 1fr;
         grid-template-areas: 
         "nav header"
         "nav content"
         "nav contact";
-    }
-    .wrapper-about {
-        grid-template-columns: $nav-width 1fr;
-        grid-template-areas:
-        "nav content"
-        "nav content"
-        "nav content";
     }
 }

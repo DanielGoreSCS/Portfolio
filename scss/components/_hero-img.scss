@@ -2,7 +2,7 @@
 .hero {
     &-img {
         background: url('../img/pexels-anni-roenkae-2693212.jpg') no-repeat top center;
-        background-color: #ccc;
+        background-color: $missing-img;
         background-size: cover;
         height: 100vh;
         overflow: hidden;
@@ -14,7 +14,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(#000, .25);
+            background: rgba($black, .25);
         }
     }
     &-text {
@@ -22,9 +22,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: $white;
         text-align: center;
         font-size: 2rem;
+        color: $white;
         z-index: 1;
     }
     &-scroll {
@@ -35,5 +35,6 @@
         text-align: center;
         font-size: 1.25rem;
         color: $white;
+        z-index: 1;
     }
 }

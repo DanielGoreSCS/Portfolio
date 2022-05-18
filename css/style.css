@@ -14,6 +14,20 @@ ul {
   padding: 0;
 }
 
+.btn {
+  padding: 25px 15px;
+  border: solid 5px papayawhip;
+  border-radius: 15px;
+  color: #FFF;
+  background-color: #CB5262;
+  font-size: 1.063rem;
+  line-height: 35px;
+  transition: 0.2s ease;
+}
+.btn:hover {
+  background: #b43647;
+}
+
 .card {
   height: 400px;
 }
@@ -65,7 +79,7 @@ img {
 }
 .form-btn {
   padding: 15px 50px;
-  background-color: white;
+  background-color: #FFF;
   border-radius: 5px;
 }
 
@@ -91,9 +105,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FFF;
   text-align: center;
   font-size: 2rem;
+  color: #FFF;
   z-index: 1;
 }
 .hero-scroll {
@@ -104,6 +118,7 @@ img {
   text-align: center;
   font-size: 1.25rem;
   color: #FFF;
+  z-index: 1;
 }
 
 .fa-brands {
@@ -127,6 +142,7 @@ img {
 
 .nav {
   grid-area: nav;
+  height: 630px;
   text-align: center;
 }
 .nav-icon {
@@ -138,12 +154,10 @@ img {
   margin-bottom: 3rem;
 }
 .nav-fixed {
-  width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  position: fixed;
   height: 100%;
-  border-right: solid 3px #52B2CB;
   box-sizing: border-box;
 }
 .nav-contact {
@@ -160,10 +174,22 @@ img {
   border-bottom: solid 2px #52B2CB;
 }
 
+@media (min-width: 992px) {
+  .nav {
+    height: 100%;
+  }
+  .nav-fixed {
+    position: fixed;
+    width: 200px;
+    border-right: solid 3px #52B2CB;
+  }
+}
 .box-primary {
-  width: 80%;
+  width: 1000px;
   background: #52B2CB;
   border: solid 5px papayawhip;
+  border-radius: 15px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.6);
 }
 
 .header {
@@ -172,12 +198,10 @@ img {
 
 .content {
   grid-area: content;
-  padding-top: 4rem;
 }
 
 .contact {
   grid-area: contact;
-  padding-top: 4rem;
 }
 .contact-scroll {
   text-align: center;
@@ -188,16 +212,14 @@ img {
   display: grid;
   grid-template-areas: "nav" "header" "content" "contact";
 }
+.wrapper-split {
+  padding-top: 4rem;
+}
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .wrapper {
     grid-template-columns: 200px 1fr;
     grid-template-areas: "nav header" "nav content" "nav contact";
-  }
-
-  .wrapper-about {
-    grid-template-columns: 200px 1fr;
-    grid-template-areas: "nav content" "nav content" "nav content";
   }
 }
 .container {

@@ -1,0 +1,14 @@
+@use '../abstracts/colors' as *;
+.btn {
+    padding: 25px 15px;
+    border: solid 5px $accent;
+    border-radius: 15px;
+    color: $white;
+    background-color: $secondary;
+    font-size: 1.063rem;
+    line-height: 35px;
+    transition: 0.2s ease;
+    &:hover {
+        background: darken($secondary, 10%);
+    }
+}
