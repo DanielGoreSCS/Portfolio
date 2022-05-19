@@ -1,3 +1,4 @@
+@use '../abstracts/breakpoints' as *;
 @use '../abstracts/colors' as *;
 .hero {
     &-img {
@@ -5,27 +6,37 @@
         background-color: $missing-img;
         background-size: cover;
         height: 100vh;
-        overflow: hidden;
+        background-attachment: fixed;
+        overflow-x: hidden;
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba($black, .25);
+        &-home {
+            background-attachment: initial;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($black, .25);
+            }
+        }
+        &-flex {
+            display: flex;
+            justify-content: center;
         }
     }
     &-text {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         text-align: center;
         font-size: 2rem;
         color: $white;
         z-index: 1;
+        &-home {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     &-scroll {
         position: absolute;
@@ -36,5 +47,16 @@
         font-size: 1.25rem;
         color: $white;
         z-index: 1;
+    }
+}
+
+@media (min-width: map-get($breakpoints, 'sm')) {
+    .hero-img-flex-align-center {
+        align-items: center;
+    }
+}
+@media (min-width: map-get($breakpoints, 'xl')) {
+    .hero-img-flex-scs {
+        align-items: center;
     }
 }
