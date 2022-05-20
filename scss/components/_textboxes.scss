@@ -6,12 +6,13 @@
     border: solid 5px $accent;
     border-radius: 15px;
     box-shadow: 0 3px 35px rgb(0 0 0 / 60%);
+    width: calc(map-get($breakpoints, 'sm') - 300px);
     box-sizing: border-box;
 }
 
 @media (min-width: map-get($breakpoints, 'sm')) {
     .box-primary {
-        width: calc(map-get($breakpoints, 'sm') - 50px);
+        width: calc(map-get($breakpoints, 'sm') - 100px);
     }
 }
 @media (min-width: map-get($breakpoints, 'md')) {

@@ -102,6 +102,10 @@
         top: 10px;
     }
 }
+.social-media {
+    margin-top: auto;
+    padding-bottom: 1rem;
+}
 @media (min-width: map-get($breakpoints, 'lg')) {
     .hamburger {
         display: none;

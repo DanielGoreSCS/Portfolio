@@ -5,10 +5,22 @@
   font-size: 1.4rem;
 }
 
+@media (max-width: 768px) {
+  .text-about {
+    font-size: 1.2rem;
+  }
+  .text-scs {
+    font-size: 1.2rem;
+  }
+}
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #25293b;
+}
+
+.form-control {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -164,7 +176,7 @@ img {
   background-color: lightgrey;
   border: none;
   border-radius: 5px;
-  padding: 0;
+  padding: 5px;
 }
 
 .hero-img {
@@ -338,6 +350,11 @@ img {
   top: 10px;
 }
 
+.social-media {
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+
 @media (min-width: 992px) {
   .hamburger {
     display: none;
@@ -358,12 +375,13 @@ img {
   border: solid 5px papayawhip;
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.6);
+  width: 276px;
   box-sizing: border-box;
 }
 
 @media (min-width: 576px) {
   .box-primary {
-    width: 526px;
+    width: 476px;
   }
 }
 @media (min-width: 768px) {
@@ -412,8 +430,14 @@ img {
   }
 }
 .container {
-  padding: 0 4rem;
+  padding: 4rem;
   margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
