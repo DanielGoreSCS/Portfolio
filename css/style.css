@@ -74,14 +74,20 @@ ul {
 
 .card {
   height: 100%;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 15px;
 }
-.card img:hover {
+.card:hover {
+  color: grey;
+}
+.card:hover img {
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   filter: brightness(50%);
 }
-.card:hover {
-  color: grey;
+.card-body {
+  padding: 1rem;
 }
 
 img {
@@ -259,6 +265,7 @@ img {
 }
 .fa-brands {
   color: #52B2CB;
+  font-size: 2rem;
 }
 .fa-angle-down {
   width: 100%;
@@ -269,7 +276,7 @@ img {
 
 .scroll {
   text-align: center;
-  margin: 5rem;
+  margin: 5rem 5rem 0;
 }
 
 .textarea {
