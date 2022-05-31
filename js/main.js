@@ -82,11 +82,19 @@ function validateForm(event) {
 
 //Animate nav menu to slide down
 //If hamburger is pressed
+$toggler = $(".toggler");
+$nav = $(".nav-fixed");
 $(".hamburger").on("click", () => {
-    if ($(".toggler")[0].checked === false) {
-        $(".nav-fixed").slideDown("slow");
+    if ($toggler[0].checked === false) {
+        $nav.slideDown("slow");
     }
     else {
-        $(".nav-fixed").slideUp("slow");
+        $nav.slideUp("slow");
     }
+});
+//Close navigation menu on link click
+//If nav-link is pressed
+$(".nav-link").on("click", () => {
+    $toggler[0].checked = false;
+    $nav.removeAttr("style");
 });
