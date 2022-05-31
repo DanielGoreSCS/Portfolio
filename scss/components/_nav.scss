@@ -8,6 +8,14 @@
     grid-area: nav;
     
     text-align: center;
+    &-flex {
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        &-container {
+            flex-grow: 1;
+        }
+    }
     &-icon {
         color: $primary;
         font-size: 7rem;
@@ -21,7 +29,7 @@
         width: 100%;
         display: none;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
         z-index: 3;
         background-color: $white;
         box-sizing: border-box;
@@ -33,8 +41,8 @@
     &-col {
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;
-        margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
+        margin-top: auto;
+        margin-bottom: auto;
     }
     &-link:hover {
         border-bottom: solid 2px $primary;

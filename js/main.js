@@ -98,3 +98,23 @@ $(".nav-link").on("click", () => {
     $toggler[0].checked = false;
     $nav.removeAttr("style");
 });
+//Media Query
+$(window).resize( () => {
+    if (window.matchMedia("(min-width: 992px)").matches) {
+        $nav.removeAttr("style");
+    }
+});
+
+// //Animate card on hover
+// $('.card').on("mouseenter", (event) => {
+//     if ($(event.target).attr("class") === "card") {
+//         console.log(event.target);
+//         $(event.target).css({"background-color": "red"});
+//     }
+
+// });
+// $('.card').on("mouseleave", (event) => {
+//     console.log($(event.target));
+//     $(event.target).removeAttr("style");
+
+// });

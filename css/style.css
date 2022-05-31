@@ -46,6 +46,7 @@ a {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .btn {
@@ -73,21 +74,36 @@ ul {
 }
 
 .card {
+  position: relative;
   height: 100%;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 15px;
-}
-.card:hover {
-  color: grey;
+  overflow: hidden;
 }
 .card:hover img {
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   filter: brightness(50%);
 }
+.card:hover .card-body {
+  color: #FFF;
+  transition: 0s ease 1700ms;
+}
 .card-body {
   padding: 1rem;
+}
+.card:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -93%;
+  left: -25%;
+  height: 150%;
+  width: 150%;
+  background-color: #CB5262;
+  border-radius: 35%;
+  animation: spin 5s ease-in-out reverse;
+  z-index: -1;
 }
 
 img {
@@ -95,6 +111,14 @@ img {
   max-height: 100%;
 }
 
+@keyframes spin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100%) rotate(500deg);
+  }
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -292,6 +316,14 @@ img {
   grid-area: nav;
   text-align: center;
 }
+.nav-flex {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+.nav-flex-container {
+  flex-grow: 1;
+}
 .nav-icon {
   color: #52B2CB;
   font-size: 7rem;
@@ -305,7 +337,7 @@ img {
   width: 100%;
   display: none;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   z-index: 3;
   background-color: #FFF;
   box-sizing: border-box;
@@ -317,8 +349,8 @@ img {
 .nav-col {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .nav-link:hover {
   border-bottom: solid 2px #52B2CB;
