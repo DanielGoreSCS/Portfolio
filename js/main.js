@@ -40,6 +40,9 @@ $("#contact").append(`
 `);
 $(".jSRequired").text("following contact form, ");
 
+$(".twitter").html('<i class="fa-brands fa-twitter"></i>');
+$(".github").html('<i class="fa-brands fa-github"></i>');
+
 //Add error border and error message
 function setError (i, errorMessage) {
     $($form[i]).css({"border": "solid 2px red"});
@@ -105,16 +108,3 @@ $(window).resize( () => {
     }
 });
 
-// //Animate card on hover
-// $('.card').on("mouseenter", (event) => {
-//     if ($(event.target).attr("class") === "card") {
-//         console.log(event.target);
-//         $(event.target).css({"background-color": "red"});
-//     }
-
-// });
-// $('.card').on("mouseleave", (event) => {
-//     console.log($(event.target));
-//     $(event.target).removeAttr("style");
-
-// });
