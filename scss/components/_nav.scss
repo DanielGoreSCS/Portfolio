@@ -19,6 +19,9 @@
     &-icon {
         color: $primary;
         font-size: 7rem;
+        &:hover {
+            color: $secondary;
+        }
     }
     &-split {
         border-bottom: solid 3px $primary;

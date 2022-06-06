@@ -371,6 +371,9 @@ img {
   color: #52B2CB;
   font-size: 7rem;
 }
+.nav-icon:hover {
+  color: #CB5262;
+}
 .nav-split {
   border-bottom: solid 3px #52B2CB;
   margin-bottom: 3rem;
