@@ -1,0 +1,17 @@
+@use '../abstracts/colors' as *;
+
+.var {
+    color: $var;
+    &-name {
+        color: $name;
+    }
+    &-string {
+        color: $string;
+    }
+    &-int {
+        color: $int;
+    }
+    &-type {
+        color: $type;
+    }
+}

@@ -5,7 +5,7 @@ const typed = new Typed(".auto-type", {
     backSpeed: 100,
     backDelay: 1000,
     smartBack: true
-})
+});
 
 $("#contact").append(`
     <div class="col-8">
