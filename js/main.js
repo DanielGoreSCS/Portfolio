@@ -58,16 +58,19 @@ function removeError (i) {
 function validateForm(event) {
     $form = $(".form-control");
     console.log($form.length);
+    let errorCount = 0;
     for (let i = 0; i < $form.length; i++) {
         if ($form[i].required) {
             //If form field empty
             if ($form[i].value === "") {
                 //Call setError
+                errorCount += 1;
                 setError(i, "Missing Required Content");
             }
             else if ($($form[i]).attr("id") === "email") {
                 if ($form[i].validity.valid !== true) {
                     //Call setError
+                    errorCount += 1;
                     setError(i, $form[i].validationMessage);
                 }
                 else {
@@ -77,9 +80,13 @@ function validateForm(event) {
             else {
                 removeError(i);
             }
-        //Else If form field contains invalid characters
-            //return false
         }
+    }
+    if (errorCount === 0) {
+        for (let i = 0; i < $form.length; i++) {
+            $form[i].value = "";
+        }
+        alert("Form submitted successfully");
     }
 }
 
