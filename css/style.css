@@ -162,6 +162,10 @@ img {
   color: #08D;
 }
 
+.code-block {
+  border-radius: 15px;
+}
+
 .row {
   display: flex;
   flex-direction: row;

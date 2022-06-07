@@ -1,8 +1,8 @@
 const typed = new Typed(".auto-type", {
     strings: ["I am a Web Developer", "I Enjoy Learning", "I Enjoy Problem Solving", "I am a Web Developer"],
     startDelay: 1000,
-    typeSpeed: 150,
-    backSpeed: 100,
+    typeSpeed: 50,
+    backSpeed: 75,
     backDelay: 1000,
     smartBack: true
 });
@@ -40,9 +40,6 @@ $("#contact").append(`
 `);
 $(".jSRequired").text("following contact form, ");
 
-$(".twitter").html('<i class="fa-brands fa-twitter"></i>');
-$(".github").html('<i class="fa-brands fa-github"></i>');
-
 //Add error border and error message
 function setError (i, errorMessage) {
     $($form[i]).css({"border": "solid 2px red"});
@@ -65,7 +62,18 @@ function validateForm(event) {
             if ($form[i].value === "") {
                 //Call setError
                 errorCount += 1;
-                setError(i, "Missing Required Content");
+                if ($($form[i]).attr("id") === "first-name") {
+                    setError(i, "Please enter your first name");
+                }
+                else if ($($form[i]).attr("id") === "last-name") {
+                    setError(i, "Please enter your last name");
+                }
+                else if ($($form[i]).attr("id") === "email") {
+                    setError(i, "Please enter your email address");
+                }
+                else {
+                    setError(i, "Missing Required Content");
+                }
             }
             else if ($($form[i]).attr("id") === "email") {
                 if ($form[i].validity.valid !== true) {
@@ -89,29 +97,3 @@ function validateForm(event) {
         alert("Form submitted successfully");
     }
 }
-
-//Animate nav menu to slide down
-//If hamburger is pressed
-$toggler = $(".toggler");
-$nav = $(".nav-fixed");
-$(".hamburger").on("click", () => {
-    if ($toggler[0].checked === false) {
-        $nav.slideDown("slow");
-    }
-    else {
-        $nav.slideUp("slow");
-    }
-});
-//Close navigation menu on link click
-//If nav-link is pressed
-$(".nav-link").on("click", () => {
-    $toggler[0].checked = false;
-    $nav.removeAttr("style");
-});
-//Media Query
-$(window).resize( () => {
-    if (window.matchMedia("(min-width: 992px)").matches) {
-        $nav.removeAttr("style");
-    }
-});
-
