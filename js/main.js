@@ -54,7 +54,7 @@ function removeError (i) {
 //Check if form field is valid
 function validateForm(event) {
     $form = $(".form-control");
-    console.log($form.length);
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let errorCount = 0;
     for (let i = 0; i < $form.length; i++) {
         if ($form[i].required) {
@@ -76,10 +76,22 @@ function validateForm(event) {
                 }
             }
             else if ($($form[i]).attr("id") === "email") {
-                if ($form[i].validity.valid !== true) {
+                // if ($form[i].validity.valid !== true) {
+                //     //Call setError
+                //     errorCount += 1;
+                //     setError(i, $form[i].validationMessage);
+                // }
+                console.log(emailRegex.test($form[i].value));
+                console.log($form[i].value);
+                if (emailRegex.test($form[i].value) !== true) {
                     //Call setError
                     errorCount += 1;
-                    setError(i, $form[i].validationMessage);
+                    if ($form[i].validationMessage !== "") {
+                        setError(i, $form[i].validationMessage);
+                    }
+                    else {
+                        setError(i, `Please enter a part following '${$form[i].value}'. E.G. '.com'.`)
+                    }
                 }
                 else {
                     removeError(i);
