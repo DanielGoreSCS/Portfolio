@@ -7,10 +7,14 @@ $toggler = $(".toggler");
 $nav = $(".nav-fixed");
 $(".hamburger").on("click", () => {
     if ($toggler[0].checked === false) {
-        $nav.slideDown("slow").delay(1000).removeAttr("style");
+        $nav.find(".social-media").hide();
+        $nav.find(".nav-flex-container").hide();
+        $nav.children().show(400);
+        $nav.addClass("show");
     }
     else {
-        $nav.slideUp("slow");
+        $nav.removeClass("show");
+        $nav.children().removeAttr("style");
     }
 });
 //Close navigation menu on link click
@@ -22,6 +26,6 @@ $(".nav-link").on("click", () => {
 //Media Query
 $(window).resize( () => {
     if (window.matchMedia("(min-width: 992px)").matches) {
-        $nav.removeAttr("style");
+        $nav.children().removeAttr("style");
     }
 });

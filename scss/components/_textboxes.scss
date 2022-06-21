@@ -8,6 +8,7 @@
     box-shadow: 0 3px 35px rgb(0 0 0 / 60%);
     width: calc(map-get($breakpoints, 'sm') - 300px);
     box-sizing: border-box;
+    margin: 82px 0;
 }
 
 @media (min-width: map-get($breakpoints, 'sm')) {
