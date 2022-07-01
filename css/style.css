@@ -147,10 +147,10 @@ img {
   }
 }
 .var {
-  color: orangered;
+  color: darkblue;
 }
 .var-name {
-  color: blue;
+  color: olive;
 }
 .var-string {
   color: brown;
@@ -160,6 +160,12 @@ img {
 }
 .var-type {
   color: #08D;
+}
+.var-comment {
+  color: darkgreen;
+}
+.var-loop {
+  color: purple;
 }
 
 .code-block {
@@ -269,6 +275,7 @@ img {
   border: none;
   border-radius: 5px;
   padding: 5px;
+  margin-top: 17px;
   box-sizing: border-box;
 }
 
@@ -505,6 +512,7 @@ img {
   width: 276px;
   box-sizing: border-box;
   margin: 82px 0;
+  top: 0;
 }
 
 @media (min-width: 576px) {

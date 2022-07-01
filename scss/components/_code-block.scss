@@ -14,6 +14,12 @@
     &-type {
         color: $type;
     }
+    &-comment {
+        color: $comment;
+    }
+    &-loop {
+        color: $loop;
+    }
 }
 .code-block {
     border-radius: 15px;

@@ -42,7 +42,7 @@ $(".jSRequired").text("following contact form, ");
 
 //Add error border and error message
 function setError (i, errorMessage) {
-    $($form[i]).css({"border": "solid 2px red"});
+    $($form[i]).css({"border": "solid 2px red", "margin-top": "0"});
     $($form[i]).prev().text(`${errorMessage}`);
 }
 //Remove error border and error message
@@ -76,13 +76,6 @@ function validateForm(event) {
                 }
             }
             else if ($($form[i]).attr("id") === "email") {
-                // if ($form[i].validity.valid !== true) {
-                //     //Call setError
-                //     errorCount += 1;
-                //     setError(i, $form[i].validationMessage);
-                // }
-                console.log(emailRegex.test($form[i].value));
-                console.log($form[i].value);
                 if (emailRegex.test($form[i].value) !== true) {
                     //Call setError
                     errorCount += 1;
