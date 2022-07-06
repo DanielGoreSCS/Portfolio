@@ -14,7 +14,46 @@
 .textarea {
     height: 150px;
 }
-
+.validation-message {
+    position: fixed;
+    color: $white;
+    background-color: $success;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-self: center;
+    z-index: 1000;
+    padding: 20px 15px;
+    margin: auto;
+    align-items: center;
+    justify-content: right;
+    &.show {
+        display: flex;
+    }
+    & .btn-close {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+        &:hover > .bar {
+            transform: rotate(225deg);
+        }
+    }
+    & .bar {
+        width: 30px;
+        transform:rotate(135deg);
+        background-color: $white;
+        &::before,
+        &::after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+    }
+}
 .required {
     color: $secondary;
 }

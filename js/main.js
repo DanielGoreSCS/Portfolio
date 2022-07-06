@@ -1,10 +1,10 @@
 const typed = new Typed(".auto-type", {
     strings: ["I am a Web Developer", "I Enjoy Learning", "I Enjoy Problem Solving", "I am a Web Developer"],
     startDelay: 1000,
-    typeSpeed: 50,
+    typeSpeed: 75,
     backSpeed: 75,
     backDelay: 1000,
-    smartBack: true
+    smartBackspace: false
 });
 
 $("#contact").append(`
@@ -99,6 +99,11 @@ function validateForm(event) {
         for (let i = 0; i < $form.length; i++) {
             $form[i].value = "";
         }
-        alert("Form submitted successfully");
+        $("main").append(`
+        <span class="validation-message show"><span>Form submitted Successfully</span><span class="btn-close"><span class="bar"></span></span></span>
+        `);
+        $(".btn-close").on("click", () => {
+            $(".validation-message").toggleClass("show");
+        });
     }
 }

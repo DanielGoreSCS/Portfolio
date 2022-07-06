@@ -48,7 +48,7 @@
   color: #25293b;
   font-size: 0.825rem;
   padding: 1rem;
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
 
 * {
@@ -283,6 +283,46 @@ img {
   height: 150px;
 }
 
+.validation-message {
+  position: fixed;
+  color: #FFF;
+  background-color: #2A2;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-self: center;
+  z-index: 1000;
+  padding: 20px 15px;
+  margin: auto;
+  align-items: center;
+  justify-content: right;
+}
+.validation-message.show {
+  display: flex;
+}
+.validation-message .btn-close {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+.validation-message .btn-close:hover > .bar {
+  transform: rotate(225deg);
+}
+.validation-message .bar {
+  width: 30px;
+  transform: rotate(135deg);
+  background-color: #FFF;
+}
+.validation-message .bar::before, .validation-message .bar::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
 .required {
   color: #CB5262;
 }
@@ -509,7 +549,7 @@ img {
   border: solid 5px papayawhip;
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.6);
-  width: 276px;
+  width: 100%;
   box-sizing: border-box;
   margin: 82px 0;
   top: 0;

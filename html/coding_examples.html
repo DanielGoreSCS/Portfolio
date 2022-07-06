@@ -47,14 +47,14 @@
                                 </p>
                                 <div class="code-block">
                                     <code>
-                                        <span class="var-type">const</span> <span class="var-name">typed</span> = <span class="var-type">new</span> <span class="var-name">Typed</span>(<span class="var-string">".auto-type"</span>, {
-                                            <span class="var">strings</span>: [<span class="var-string">"I am a Web Developer"</span>, <span class="var-string">"I Enjoy Learning"</span>, <span class="var-string">"I Enjoy Problem Solving"</span>, <span class="var-string">"I am a Web Developer"</span>],
-                                            <span class="var">startDelay</span>: <span class="var-int">1000</span>,
-                                            <span class="var">typeSpeed</span>: <span class="var-int">50</span>,
-                                            <span class="var">backSpeed</span>: <span class="var-int">75</span>,
-                                            <span class="var">backDelay</span>: <span class="var-int">1000</span>,
-                                            <span class="var">smartBack</span>: <span class="var-type">true</span>
-                                        });
+<span class="var-type">const</span> <span class="var-name">typed</span> = <span class="var-type">new</span> <span class="var-name">Typed</span>(<span class="var-string">".auto-type"</span>, {
+    <span class="var">strings</span>: [<span class="var-string">"I am a Web Developer"</span>, <span class="var-string">"I Enjoy Learning"</span>, <span class="var-string">"I Enjoy Problem Solving"</span>, <span class="var-string">"I am a Web Developer"</span>],
+    <span class="var">startDelay</span>: <span class="var-int">1000</span>,
+    <span class="var">typeSpeed</span>: <span class="var-int">50</span>,
+    <span class="var">backSpeed</span>: <span class="var-int">75</span>,
+    <span class="var">backDelay</span>: <span class="var-int">1000</span>,
+    <span class="var">smartBack</span>: <span class="var-type">true</span>
+});
                                     </code>
                                 </div>
                                 <p>
@@ -62,16 +62,16 @@
                                 </p>
                                 <div class="code-block">
                                     <code>
-                                        <span class="var">$hamburger</span> = <span class="var-name">$</span>(<span class="var-string">".hamburger"</span>);
-                                       <span class="var">$hamburger</span>.<span class="var-name">on</span>(<span class="var-string">"click"</span>, () => {
-                                           <span class="var">$hamburger</span>.<span class="var-name">toggleClass</span>(<span class="var-string">"is-active"</span>);
-                                        });
+<span class="var">$hamburger</span> = <span class="var-name">$</span>(<span class="var-string">".hamburger"</span>);
+<span class="var">$hamburger</span>.<span class="var-name">on</span>(<span class="var-string">"click"</span>, () => {
+    <span class="var">$hamburger</span>.<span class="var-name">toggleClass</span>(<span class="var-string">"is-active"</span>);
+});
 
-                                        <span class="var-name">$</span>(<span class="var-string">".nav-item"</span>).<span class="var-name">hover</span>(<span class="var-type">function</span> () {
-                                            <span class="var-name">$</span>(<span class="var-type">this</span>).<span class="var-name">children</span>().<span class="var-name">addClass</span>(<span class="var-string">'show'</span>);
-                                        }, <span class="var-type">function</span> () {
-                                            <span class="var-name">$</span>(<span class="var-type">this</span>).<span class="var-name">children</span>().<span class="var-name">removeClass</span>(<span class="var-string">'show'</span>);
-                                        });
+<span class="var-name">$</span>(<span class="var-string">".nav-item"</span>).<span class="var-name">hover</span>(<span class="var-type">function</span> () {
+    <span class="var-name">$</span>(<span class="var-type">this</span>).<span class="var-name">children</span>().<span class="var-name">addClass</span>(<span class="var-string">'show'</span>);
+}, <span class="var-type">function</span> () {
+    <span class="var-name">$</span>(<span class="var-type">this</span>).<span class="var-name">children</span>().<span class="var-name">removeClass</span>(<span class="var-string">'show'</span>);
+});
                                     </code>
                                 </div>
                                 <p>
@@ -79,68 +79,68 @@
                                 </p>
                                 <div class="code-block">
                                     <code>
-                                        <span class="var-comment">//Add error border and error message</span>
-                                        <span class="var-type">function</span> <span class="var-name">setError</span> (<span class="var">i</span>, <span class="var">errorMessage</span>) {
-                                            <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">css</span>({<span class="var-string">"border"</span>: <span class="var-string">"solid 2px red"</span>, <span class="var-string">"margin-top"</span>: <span class="var-string">"0"</span>});
-                                            <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">prev()</span>.<span class="var-name">text</span>(`<span class="var-type">${</span><span class="var">errorMessage</span><span class="var-type">}</span>`);
-                                        }
-                                        <span class="var-comment">//Remove error border and error message</span>
-                                        <span class="var-type">function</span> <span class="var-name">removeError</span> (<span class="var">i</span>) {
-                                            <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">removeAttr</span>(<span class="var-string">"style"</span>);
-                                            <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">prev</span>().<span class="var-name">text</span>(<span class="var-string">""</span>);
-                                        }
+<span class="var-comment">//Add error border and error message</span>
+<span class="var-type">function</span> <span class="var-name">setError</span> (<span class="var">i</span>, <span class="var">errorMessage</span>) {
+    <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">css</span>({<span class="var-string">"border"</span>: <span class="var-string">"solid 2px red"</span>, <span class="var-string">"margin-top"</span>: <span class="var-string">"0"</span>});
+    <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">prev()</span>.<span class="var-name">text</span>(`<span class="var-type">${</span><span class="var">errorMessage</span><span class="var-type">}</span>`);
+}
+<span class="var-comment">//Remove error border and error message</span>
+<span class="var-type">function</span> <span class="var-name">removeError</span> (<span class="var">i</span>) {
+    <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">removeAttr</span>(<span class="var-string">"style"</span>);
+    <span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">prev</span>().<span class="var-name">text</span>(<span class="var-string">""</span>);
+}
 
-                                        <span class="var-comment">//Check if form field is valid</span>
-                                        <span class="var-type">function</span> <span class="var-name">validateForm</span>(<span class="var-type">event</span>) {
-                                            <span class="var">$form</span> = <span class="var">$</span>(<span class="var">".form-control"</span>);
-                                            <span class="var-type">const</span> <span class="var">emailRegex</span> = <span class="var-string">/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span>;
-                                            <span class="var-type">let</span> <span class="var">errorCount</span> = <span class="var">0</span>;
-                                            <span class="var-loop">for</span> (<span class="var-type">let</span> <span class="var">i</span> = <span class="var-int">0</span>; <span class="var">i</span> < <span class="var">$form.length</span>; <span class="var">i</span>++) {
-                                                <span class="var-loop">if</span> (<span class="var">$form</span>[<span class="var">i</span>].<span class="var">required</span>) {
-                                                    <span class="var-comment">//If form field empty</span>
-                                                    <span class="var-loop">if</span> (<span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span> === <span class="var-string">""</span>) {
-                                                        <span class="var-comment">//Call setError</span>
-                                                        <span class="var">errorCount</span> += <span class="var-int">1</span>;
-                                                        <span class="var-loop">if</span> (<span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"first-name"</span>) {
-                                                            <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Please enter your first name"</span>);
-                                                        }
-                                                        <span class="var-loop">else if</span> (<span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"last-name"</span>) {
-                                                            <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Please enter your last name"</span>);
-                                                        }
-                                                        <span class="var-loop">else if</span> (<span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"email"</span>) {
-                                                            <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Please enter your email address"</span>);
-                                                        }
-                                                        <span class="var-loop">else</span> {
-                                                            <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Missing Required Content"</span>);
-                                                        }
-                                                    }
-                                                    <span class="var-loop">else if</span> (<span class="var">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"email"</span>) {
-                                                        <span class="var-loop">if</span> (<span class="var">emailRegex</span>.<span class="var-name">test</span>(<span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span>) !== <span class="var-type">true</span>) {
-                                                            <span class="var-comment">//Call setError</span>
-                                                            <span class="var-name">errorCount</span> += <span class="var-int">1</span>;
-                                                            <span class="var-loop">if</span> (<span class="var">$form</span>[<span class="var">i</span>].<span class="var">validationMessage</span> !== <span class="var-string">""</span>) {
-                                                                <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var">$form</span>[<span class="var">i</span>].<span class="var">validationMessage</span>);
-                                                            }
-                                                            <span class="var-loop">else</span> {
-                                                                <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">`Please enter a part following '${<span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span>}'. E.G. '.com'.`</span>)
-                                                            }
-                                                        }
-                                                        <span class="var-loop">else</span> {
-                                                            <span class="var-name">removeError</span>(<span class="var">i</span>);
-                                                        }
-                                                    }
-                                                    <span class="var-loop">else</span> {
-                                                        <span class="var-name">removeError</span>(<span class="var">i</span>);
-                                                    }
-                                                }
-                                            }
-                                            <span class="var-loop">if</span> (<span class="var">errorCount</span> === <span class="var-int">0</span>) {
-                                                <span class="var-loop">for</span> (<span class="var-type">let</span> <span class="var">i</span> = <span class="var-int">0</span>; <span class="var">i</span> < <span class="var">$form.length</span>; <span class="var">i</span>++) {
-                                                    <span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span> = <span class="var-string">""</span>;
-                                                }
-                                                <span class="var-name">alert</span>(<span class="var-string">"Form submitted successfully"</span>);
-                                            }
-                                        }
+<span class="var-comment">//Check if form field is valid</span>
+<span class="var-type">function</span> <span class="var-name">validateForm</span>(<span class="var-type">event</span>) {
+    <span class="var">$form</span> = <span class="var">$</span>(<span class="var">".form-control"</span>);
+    <span class="var-type">const</span> <span class="var">emailRegex</span> = <span class="var-string">/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</span>;
+    <span class="var-type">let</span> <span class="var">errorCount</span> = <span class="var">0</span>;
+    <span class="var-loop">for</span> (<span class="var-type">let</span> <span class="var">i</span> = <span class="var-int">0</span>; <span class="var">i</span> < <span class="var">$form.length</span>; <span class="var">i</span>++) {
+        <span class="var-loop">if</span> (<span class="var">$form</span>[<span class="var">i</span>].<span class="var">required</span>) {
+            <span class="var-comment">//If form field empty</span>
+            <span class="var-loop">if</span> (<span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span> === <span class="var-string">""</span>) {
+                <span class="var-comment">//Call setError</span>
+                <span class="var">errorCount</span> += <span class="var-int">1</span>;
+                <span class="var-loop">if</span> (<span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"first-name"</span>) {
+                    <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Please enter your first name"</span>);
+                }
+                <span class="var-loop">else if</span> (<span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"last-name"</span>) {
+                    <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Please enter your last name"</span>);
+                }
+                <span class="var-loop">else if</span> (<span class="var-name">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"email"</span>) {
+                    <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Please enter your email address"</span>);
+                }
+                <span class="var-loop">else</span> {
+                    <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">"Missing Required Content"</span>);
+                }
+            }
+            <span class="var-loop">else if</span> (<span class="var">$</span>(<span class="var">$form</span>[<span class="var">i</span>]).<span class="var-name">attr</span>(<span class="var-string">"id"</span>) === <span class="var-string">"email"</span>) {
+                <span class="var-loop">if</span> (<span class="var">emailRegex</span>.<span class="var-name">test</span>(<span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span>) !== <span class="var-type">true</span>) {
+                    <span class="var-comment">//Call setError</span>
+                    <span class="var-name">errorCount</span> += <span class="var-int">1</span>;
+                    <span class="var-loop">if</span> (<span class="var">$form</span>[<span class="var">i</span>].<span class="var">validationMessage</span> !== <span class="var-string">""</span>) {
+                        <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var">$form</span>[<span class="var">i</span>].<span class="var">validationMessage</span>);
+                    }
+                    <span class="var-loop">else</span> {
+                        <span class="var-name">setError</span>(<span class="var">i</span>, <span class="var-string">`Please enter a part following '${<span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span>}'. E.G. '.com'.`</span>)
+                    }
+                }
+                <span class="var-loop">else</span> {
+                    <span class="var-name">removeError</span>(<span class="var">i</span>);
+                }
+            }
+            <span class="var-loop">else</span> {
+                <span class="var-name">removeError</span>(<span class="var">i</span>);
+            }
+        }
+    }
+    <span class="var-loop">if</span> (<span class="var">errorCount</span> === <span class="var-int">0</span>) {
+        <span class="var-loop">for</span> (<span class="var-type">let</span> <span class="var">i</span> = <span class="var-int">0</span>; <span class="var">i</span> < <span class="var">$form.length</span>; <span class="var">i</span>++) {
+            <span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span> = <span class="var-string">""</span>;
+        }
+        <span class="var-name">alert</span>(<span class="var-string">"Form submitted successfully"</span>);
+    }
+}
                                     </code>
                                 </div>
                             </div>
