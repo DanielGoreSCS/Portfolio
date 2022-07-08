@@ -138,7 +138,13 @@
         <span class="var-loop">for</span> (<span class="var-type">let</span> <span class="var">i</span> = <span class="var-int">0</span>; <span class="var">i</span> < <span class="var">$form.length</span>; <span class="var">i</span>++) {
             <span class="var">$form</span>[<span class="var">i</span>].<span class="var">value</span> = <span class="var-string">""</span>;
         }
-        <span class="var-name">alert</span>(<span class="var-string">"Form submitted successfully"</span>);
+        <span class="var-name">$</span>(<span class="var-string">"main"</span>).<span class="var-name">append</span>(<span class="var-string">`
+        &lt;div class="fade-wrapper show"&gt;&lt;/div&gt;&lt;div class="validation-message show"&gt;&lt;h2&gt;THANK YOU&lt;/h2&gt;&lt;p&gt;The form was submitted successfully&lt;/p&gt;&lt;div class="circle"&gt;&lt;i class="fa-solid fa-check"&gt;&lt;/i&gt;&lt;/span&gt;&lt;span class="btn-close"&gt;&lt;span class="bar"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        `</span>);
+        <span class="var-name">$</span>(<span class="var-string">".btn-close"</span>).<span class="var-name">on</span>(<span class="var-string">"click"</span>, () => {
+            <span class="var-name">$</span>(<span class="var-string">".validation-message"</span>).<span class="var-name">remove</span>();
+            <span class="var-name">$</span>(<span class="var-string">".fade-wrapper"</span>).<span class="var-name">remove</span>();
+        });
     }
 }
                                     </code>

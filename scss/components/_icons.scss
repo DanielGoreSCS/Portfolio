@@ -12,4 +12,18 @@
             width: 100%;
         }
     }
+    &-check {
+        color: $white;
+        font-size: 60px;
+    }
+}
+.circle {
+    background-color: $primary;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

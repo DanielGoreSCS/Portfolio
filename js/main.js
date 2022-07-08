@@ -100,10 +100,11 @@ function validateForm(event) {
             $form[i].value = "";
         }
         $("main").append(`
-        <span class="validation-message show"><span>Form submitted Successfully</span><span class="btn-close"><span class="bar"></span></span></span>
+        <div class="fade-wrapper show"></div><div class="validation-message show"><h2>THANK YOU</h2><p>The form was submitted successfully</p><div class="circle"><i class="fa-solid fa-check"></i></span><span class="btn-close"><span class="bar"></span></div></div>
         `);
         $(".btn-close").on("click", () => {
-            $(".validation-message").toggleClass("show");
+            $(".validation-message").remove();
+            $(".fade-wrapper").remove();
         });
     }
 }
