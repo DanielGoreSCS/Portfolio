@@ -14,28 +14,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="nav">
-                <input class="toggler" id="toggler" type="checkbox">
-                <label class="hamburger" for="toggler"><span class="bar"></span></label>
-                <nav class="nav-fixed">
-                    <div class="nav-split">
-                        <span><a class="nav-icon" href="../index.html">DG</a></span>
-                    </div>
-                    <div class="nav-flex-container">
-                        <ul class="nav-flex">
-                            <li class="col nav-col"><a class="nav-link" href="#"><strong>About Me</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="../index.html#content"><strong>My Portfolio</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="coding_examples.html"><strong>Coding Examples</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="scs_scheme.html"><strong>SCS Scheme</strong></a></li>
-                            <li class="col nav-col nav-contact"><a class="nav-link" href="../index.html#contact"><strong>Contact Me</strong></a></li>
-                        </ul>
-                    </div>
-                    <div class="social-media">
-                        <a class="twitter nav-link" href="https://twitter.com/EggSoloDev" target="_blank"><strong>Twitter</strong></a>
-                        <a class="github nav-link" href="https://github.com/DanielGoreSCS" target="_blank"><strong>Github</strong></a>
-                    </div>
-                </nav>
-            </div>
+            <?php include "nav.php"; ?>
             <main>
                 <div class="content hero-img hero-img-flex hero-img-flex-align-center">
                     <div class="hero-text box-primary">

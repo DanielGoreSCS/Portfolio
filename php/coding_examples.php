@@ -14,34 +14,14 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="nav">
-                <input class="toggler" id="toggler" type="checkbox">
-                <label class="hamburger" for="toggler"><span class="bar"></span></label>
-                <nav class="nav-fixed">
-                    <div class="nav-split">
-                        <span><a class="nav-icon" href="../index.html">DG</a></span>
-                    </div>
-                    <div class="nav-flex-container">
-                        <ul class="nav-flex">
-                            <li class="col nav-col"><a class="nav-link" href="about.html"><strong>About Me</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="../index.html#content"><strong>My Portfolio</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="#"><strong>Coding Examples</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="scs_scheme.html"><strong>SCS Scheme</strong></a></li>
-                            <li class="col nav-col nav-contact"><a class="nav-link" href="../index.html#contact"><strong>Contact Me</strong></a></li>
-                        </ul>
-                    </div>
-                    <div class="social-media">
-                        <a class="twitter nav-link" href="https://twitter.com/EggSoloDev" target="_blank"><strong>Twitter</strong></a>
-                        <a class="github nav-link" href="https://github.com/DanielGoreSCS" target="_blank"><strong>Github</strong></a>
-                    </div>
-                </nav>
-            </div>
+            <?php include "nav.php"; ?>
             <main>
                 <div class="content hero-img hero-img-flex hero-img-flex-align-center">
                     <div class="hero-text box-primary">
                         <div class="container">
                             <div class="text-coding-examples">
                                 <h1>Coding Examples</h1>
+                                <h2>Utilising Plugins</h2>
                                 <p>
                                     The plugin <a href="https://mattboldt.com/demos/typed-js/">Typed.js</a> was used to create the typewriter effect. You will find an example of this code below.
                                 </p>
@@ -57,6 +37,7 @@
 });
                                     </code>
                                 </div>
+                                <h2>Menu visibility</h2>
                                 <p>
                                     The JQuery displayed below is used to toggle the hamburger menu's visibility.
                                 </p>
@@ -74,6 +55,7 @@
 });
                                     </code>
                                 </div>
+                                <h2>Form Validation</h2>
                                 <p>
                                     I have used JQuery for my form validation. If there is an error the form element gets a red outline and has the error message displayed above it.
                                 </p>
@@ -147,6 +129,82 @@
         });
     }
 }
+                                    </code>
+                                </div>
+                                <h2>SQL Database Challenge</h2>
+                                <p>This is the database used for the example</p>
+                                <img src="../img/movie-database.png" alt="Movie Database">
+                                <p>The purpose of this query is to get the following information from the database:</p>
+                                <ul>
+                                    <li>Movie title</li>
+                                    <li>Release year</li>
+                                    <li>Directors full name</li>
+                                    <li>Movie genre</li>
+                                    <li>Movie rating</li>
+                                </ul>
+                                <p>As the data is not all stored in the same table the data must be joined together via the shared IDs.</p>
+                                <div class="code-block">
+                                    <code>
+SELECT m.mov_title AS "Title", m.mov_year AS "Year", d.dir_fname || ' ' || d.dir_lname AS "Director", g.gen_title AS "Genre", r.rev_stars AS "Rating"
+FROM movie AS m
+JOIN movie_direction AS md
+    ON m.mov_id = md.mov_id
+JOIN director AS d
+    ON d.dir_id = md.dir_id
+JOIN movie_genres AS mg
+    ON m.mov_id = mg.mov_id
+JOIN genres AS g
+    ON g.gen_id = mg.gen_id
+JOIN rating AS r
+    ON m.mov_id = r.mov_id
+    WHERE r.rev_stars IS NOT NULL
+ORDER BY m.mov_year;
+                                    </code>
+                                </div>
+                                <p>This data is then displayed from the oldest movie to the most recent release so long as the movie has a rating.</p>
+                                <img src="../img/movie-database-table.png" alt="Table that displays the outcome of the SQL code">
+                                <h2>Adding a new contact to a database</h2>
+                                <p>After passing the JavaScript validation, the contact form submits the values via the post method. They are then stored in the connected database.</p>
+                                <div class="code-block">
+                                    <code>
+&lt;?php
+include_once 'connection.php';
+try
+{
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if(!empty($_POST['contact-name']) && !empty($_POST['contact-email']) && !empty($_POST['contact-phone']) && !empty($_POST['contact-subject']) && !empty($_POST['contact-message'])) {
+            $name = $_POST['contact-name'];
+            $company = $_POST['contact-company'];
+            $email = $_POST['contact-email'];
+            $phone = $_POST['contact-phone'];
+            $subject = $_POST['contact-subject'];
+            $message = $_POST['contact-message'];
+            if(!empty($_POST['contact-checkbox'])) {
+                $checkbox = true;
+            } else {
+                $checkbox = false;
+            }
+
+            $database = new Connection();
+            $db = $database->openConnection();
+            
+            // inserting data into create table using prepare statement to prevent from sql injections
+            $stm = $db->prepare("INSERT INTO contact (name,company,email,phone,subject,message,marketing) VALUES ( :name, :company, :email, :phone, :subject, :message, :marketing)") ;
+            // inserting a record
+            $stm->execute(array(':name' => $name , ':company' => $company , ':email' => $email, ':phone' => $phone, ':subject' => $subject, ':message' => $message, ':marketing' => $checkbox));
+            echo "New record created successfully";
+        }
+    }
+    else {
+        echo "There was an issue adding the data to the database";
+    }
+    
+}
+catch (PDOException $e)
+{
+    echo "There is some problem in connection: " . $e->getMessage();
+}
+?&gt;
                                     </code>
                                 </div>
                             </div>
