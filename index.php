@@ -52,39 +52,6 @@
                                 </div>
                             </div>
                         </a>
-                        <!-- <a class="col col-md-6 col-xl-4" href="#" target="_blank">
-                            <div class="card">
-                                <img src="img/cards/pexels-vie-studio-4439444.jpg" alt="Placeholder">
-                                <div class="card-body">
-                                    <h2>Project Four</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="col col-md-6 col-xl-4" href="#" target="_blank">
-                            <div class="card">
-                                <img src="img/cards/pexels-vie-studio-4439444.jpg" alt="Placeholder">
-                                <div class="card-body">
-                                    <h2>Project Five</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="col col-md-6 col-xl-4" href="#" target="_blank">
-                            <div class="card">
-                                <img src="img/cards/pexels-vie-studio-4439444.jpg" alt="Placeholder">
-                                <div class="card-body">
-                                    <h2>Project Six</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </div>
-                        </a> -->
                     </div>
                     <div class="contact wrapper-split row" id="contact">
                         <div class="col-md-6 col-xl-4">
