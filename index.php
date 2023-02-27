@@ -14,28 +14,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="nav">
-                <input class="toggler" id="toggler" type="checkbox">
-                <label class="hamburger" for="toggler"><span class="bar"></span></label>
-                <nav class="nav-fixed">
-                    <div class="nav-split">
-                        <span><a class="nav-icon" href="#">DG</a></span>
-                    </div>
-                    <div class="nav-flex-container">
-                        <ul class="nav-flex">
-                            <li class="col nav-col"><a class="nav-link" href="html/about.html"><strong>About Me</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="#content"><strong>My Portfolio</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="html/coding_examples.html"><strong>Coding Examples</strong></a></li>
-                            <li class="col nav-col"><a class="nav-link" href="html/scs_scheme.html"><strong>SCS Scheme</strong></a></li>
-                            <li class="col nav-col nav-contact"><a class="nav-link" href="#contact"><strong>Contact Me</strong></a></li>
-                        </ul>
-                    </div>
-                    <div class="social-media">
-                        <a class="twitter nav-link" href="https://twitter.com/EggSoloDev" target="_blank"><strong>Twitter</strong></a>
-                        <a class="github nav-link" href="https://github.com/DanielGoreSCS" target="_blank"><strong>Github</strong></a>
-                    </div>
-                </nav>
-            </div>
+            <?php include "php/nav.php"; ?>
             <main>
                 <div class="header hero-img hero-img-home">
                     <div class="hero-text hero-text-home">
@@ -54,35 +33,26 @@
                                 <img src="img/cards/Screenshot%202022-05-12%20154835.png" alt="Netmatters Website">
                                 <div class="card-body">
                                     <h2>Netmatters Homepage</h2>
+                                    <span class="languages">PHP CSS SCSS JavaScript</span>
                                     <p>
                                         My recreation of the Netmatters homepage.
                                     </p>
                                 </div>
                             </div>
                         </a>
-                        <a class="col col-md-6 col-xl-4" href="#" target="_blank">
+                        <a class="col col-md-6 col-xl-4" href="https://daniel-gore.netmatters-scs.co.uk/array-reflection" target="_blank">
                             <div class="card">
-                                <img src="img/cards/Screenshot%202022-05-18%20165033.png" alt="Portfolio">
+                                <img src="img/cards/JavaScript-Array-Reflection.png" alt="javaScript Array Reflection">
                                 <div class="card-body">
-                                    <h2>Portfolio</h2>
+                                    <h2>Javascript Array Reflection</h2>
+                                    <span class="languages">HTML SCSS JavaScript</span>
                                     <p>
-                                        This is the portfolio site that you are currently using.
+                                        A random image is generated so that the user can save it against an email address. This is then stored so that you can view all of the images saved to each email address.
                                     </p>
                                 </div>
                             </div>
                         </a>
                         <!-- <a class="col col-md-6 col-xl-4" href="#" target="_blank">
-                            <div class="card">
-                                <img src="img/cards/pexels-vie-studio-4439444.jpg" alt="Placeholder">
-                                <div class="card-body">
-                                    <h2>Project Three</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="col col-md-6 col-xl-4" href="#" target="_blank">
                             <div class="card">
                                 <img src="img/cards/pexels-vie-studio-4439444.jpg" alt="Placeholder">
                                 <div class="card-body">

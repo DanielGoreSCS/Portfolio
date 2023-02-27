@@ -9,27 +9,27 @@ const typed = new Typed(".auto-type", {
 
 $("#contact").append(`
     <div class="col-8">
-    <form id="contact-form" action="" method="post">
+    <form id="contact-form" action="php/contact_form.php" method="POST">
         <div class="row">
             <div class="col col-12 col-md-6">
                 <label class="required" for="first-name"></label>
-                <input class="form-control" type="text" id="first-name" placeholder="First Name*" required>
+                <input class="form-control" type="text" id="first-name" name="first-name" placeholder="First Name*" required>
             </div>
             <div class="col col-12 col-md-6">
                 <label class="required" for="last-name"></label>
-                <input class="form-control" type="text" id="last-name" placeholder="Last Name*" required>
+                <input class="form-control" type="text" id="last-name" name="last-name" placeholder="Last Name*" required>
             </div>
             <div class="col col-12">
                 <label class="required" for="email"></label>
-                <input class="form-control" type="email" id="email" placeholder="Email Address*" required>
+                <input class="form-control" type="email" id="email" name="email" placeholder="Email Address*" required>
             </div>
             <div class="col col-12">
                 <label class="required" for="subject"></label>
-                <input class="form-control" type="text" id="subject" placeholder="Subject">
+                <input class="form-control" type="text" id="subject" name="subject" placeholder="Subject">
             </div>
             <div class="col col-12">
                 <label class="required" for="message"></label>
-                <textarea class="form-control textarea" id="message" placeholder="Message"></textarea>
+                <textarea class="form-control textarea" id="message" name="message" placeholder="Message*" required></textarea>
             </div>
             <div class="col col-12">
                 <button class="btn btn-form" type="button" onclick="validateForm()">Submit</button>
@@ -96,15 +96,26 @@ function validateForm(event) {
         }
     }
     if (errorCount === 0) {
-        for (let i = 0; i < $form.length; i++) {
-            $form[i].value = "";
-        }
-        $("main").append(`
-        <div class="fade-wrapper show"></div><div class="validation-message show"><h2>THANK YOU</h2><p>The form was submitted successfully</p><div class="circle"><i class="fa-solid fa-check"></i></span><span class="btn-close"><span class="bar"></span></div></div>
-        `);
-        $(".btn-close").on("click", () => {
-            $(".validation-message").remove();
-            $(".fade-wrapper").remove();
+        //ajax
+        $.ajax({
+            type:'POST',
+            url:'php/contact_form.php',
+            data:$('#contact-form').serialize(),
+            success: function(response) {
+                for (let i = 0; i < $form.length; i++) {
+                    $form[i].value = "";
+                }
+                $("main").append(`
+                <div class="fade-wrapper show"></div><div class="validation-message show"><h2>THANK YOU</h2><p>The form was submitted successfully</p><div class="circle"><i class="fa-solid fa-check"></i></span><span class="btn-close"><span class="bar"></span></div></div>
+                `);
+                $(".btn-close").on("click", () => {
+                    $(".validation-message").remove();
+                    $(".fade-wrapper").remove();
+                });
+            },
+            error: function() {
+                alert('error in submitting form');
+            }
         });
     }
 }

@@ -120,7 +120,19 @@
     margin-top: auto;
     padding-bottom: 1rem;
 }
+
+@media (min-width: 540px) {
+    .nav-fixed {
+        width: 40%;
+        right: 0;
+    }
+}
+
 @media (min-width: map-get($breakpoints, 'lg')) {
+    .nav-fixed {
+        width: initial;
+        right: initial;
+    }
     .hamburger {
         display: none;
     }
@@ -131,6 +143,11 @@
             width: $nav-width;
             border-right: solid 3px $primary;
         }
+    }
+}
+@media (max-height: 511px) {
+    .nav-split {
+        margin-bottom: 0;
     }
 }
 

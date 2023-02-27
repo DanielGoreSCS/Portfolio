@@ -13,6 +13,10 @@
 .text-coding-examples a:hover {
   text-decoration: underline;
 }
+.text-coding-examples ul {
+  text-align: left;
+  list-style: disc;
+}
 .text-scs {
   font-size: 1rem;
 }
@@ -116,6 +120,12 @@ ul {
   bottom: 0;
   padding: 1rem;
 }
+.card-body .languages {
+  color: #CB5262;
+  position: relative;
+  font-weight: 600;
+  bottom: 18px;
+}
 .card:hover {
   transform: translateY(-1rem) scale(1.025);
   background-color: #CB5262;
@@ -127,6 +137,9 @@ ul {
 }
 .card:hover .card-body h2 {
   text-decoration: underline #FFF;
+}
+.card:hover .card-body .languages {
+  color: #FFF;
 }
 .card:hover .card-body::before {
   content: "";
@@ -303,6 +316,7 @@ img {
 
 .textarea {
   height: 150px;
+  padding-top: 16px;
 }
 
 .validation-message {
@@ -576,7 +590,18 @@ img {
   padding-bottom: 1rem;
 }
 
+@media (min-width: 540px) {
+  .nav-fixed {
+    width: 40%;
+    right: 0;
+  }
+}
 @media (min-width: 992px) {
+  .nav-fixed {
+    width: initial;
+    right: initial;
+  }
+
   .hamburger {
     display: none;
   }
@@ -588,6 +613,11 @@ img {
     display: flex;
     width: 200px;
     border-right: solid 3px #52B2CB;
+  }
+}
+@media (max-height: 511px) {
+  .nav-split {
+    margin-bottom: 0;
   }
 }
 @keyframes slidedown {

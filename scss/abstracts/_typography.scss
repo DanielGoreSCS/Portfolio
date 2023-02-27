@@ -15,6 +15,10 @@
                 text-decoration: underline;
             }
         }
+        & ul {
+            text-align: left;
+            list-style: disc;
+        }
     }
     &-scs {
         font-size: 1rem;
